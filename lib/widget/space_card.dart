@@ -69,32 +69,35 @@ class SpaceCard extends StatelessWidget {
             ),
           ),
           SizedBox(width: 20),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                space.name,
-                style: blackTextStyle.copyWith(fontSize: 18),
-              ),
-              SizedBox(height: 2),
-              Text.rich(
-                TextSpan(
-                  text: '\$ ${space.price} ',
-                  style: purpleTextStyle.copyWith(fontSize: 16),
-                  children: [
-                    TextSpan(
-                      text: '/ month',
-                      style: greyTextStyle,
-                    ),
-                  ],
+          FittedBox(
+            fit: BoxFit.contain,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  space.name,
+                  style: blackTextStyle.copyWith(fontSize: 18),
                 ),
-              ),
-              SizedBox(height: 16),
-              Text(
-                '${space.city}, ${space.country}',
-                style: greyTextStyle.copyWith(fontSize: 14),
-              )
-            ],
+                SizedBox(height: 2),
+                Text.rich(
+                  TextSpan(
+                    text: '\$ ${space.price} ',
+                    style: purpleTextStyle.copyWith(fontSize: 16),
+                    children: [
+                      TextSpan(
+                        text: '/ month',
+                        style: greyTextStyle,
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 16),
+                Text(
+                  '${space.city}, ${space.country}',
+                  style: greyTextStyle.copyWith(fontSize: 14),
+                )
+              ],
+            ),
           ),
         ],
       ),
