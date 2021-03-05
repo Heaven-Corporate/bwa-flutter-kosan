@@ -307,13 +307,15 @@ class _DetailPageState extends State<DetailPage> {
                         margin: EdgeInsets.symmetric(horizontal: edge),
                         width: MediaQuery.of(context).size.width - (2 * edge),
                         height: 50,
-                        child: RaisedButton(
+                        child: ElevatedButton(
                           onPressed: () {
                             showConfirmation();
                           },
-                          color: purpleColor,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(17),
+                          style: ElevatedButton.styleFrom(
+                            primary: purpleColor,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(17),
+                            ),
                           ),
                           child: Text(
                             'Pesan',
