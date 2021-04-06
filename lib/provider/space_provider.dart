@@ -9,7 +9,6 @@ class SpaceProvider extends ChangeNotifier {
     var result =
         await http.get('https://bwa-cozy.herokuapp.com/recommended-spaces');
     print(result.statusCode);
-    print(result.body);
 
     if (result.statusCode == 200) {
       List data = jsonDecode(result.body);
