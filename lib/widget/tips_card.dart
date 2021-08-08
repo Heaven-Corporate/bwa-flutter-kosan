@@ -4,7 +4,7 @@ import 'package:bwa_cozy/theme.dart';
 import 'package:flutter/material.dart';
 
 class TipsCard extends StatelessWidget {
-  final Tips tips;
+  final Tips? tips;
 
   TipsCard({this.tips});
 
@@ -13,7 +13,7 @@ class TipsCard extends StatelessWidget {
     return Row(
       children: [
         Image.asset(
-          tips.imageUrl,
+          tips!.imageUrl!,
           width: 80,
           height: 80,
         ),
@@ -22,12 +22,12 @@ class TipsCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              tips.tittle,
+              tips!.tittle!,
               style: blackTextStyle.copyWith(fontSize: 18),
             ),
             SizedBox(height: 4),
             Text(
-              'Updated ${tips.updatedAt}',
+              'Updated ${tips!.updatedAt}',
               style: greyTextStyle.copyWith(fontSize: 14),
             ),
           ],

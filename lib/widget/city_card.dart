@@ -3,9 +3,9 @@ import 'package:bwa_cozy/theme.dart';
 import 'package:flutter/material.dart';
 
 class CityCard extends StatelessWidget {
-  final City city;
+  final City? city;
 
-  CityCard({Key key, this.city});
+  CityCard({this.city});
 
   @override
   Widget build(BuildContext context) {
@@ -20,12 +20,12 @@ class CityCard extends StatelessWidget {
             Stack(
               children: [
                 Image.asset(
-                  city.imageUrl,
+                  city!.imageUrl!,
                   width: 120,
                   height: 102,
                   fit: BoxFit.cover,
                 ),
-                city.isPopular
+                city!.isPopular!
                     ? Align(
                         alignment: Alignment.topRight,
                         child: Container(
@@ -52,7 +52,7 @@ class CityCard extends StatelessWidget {
               height: 11,
             ),
             Text(
-              city.name,
+              city!.name!,
               style: blackTextStyle.copyWith(fontSize: 16),
             ),
           ],

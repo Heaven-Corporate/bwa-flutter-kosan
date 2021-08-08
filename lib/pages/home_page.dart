@@ -137,7 +137,7 @@ class HomePage extends StatelessWidget {
                 future: spaceProvider.getRecomendedSpace(),
                 builder: (context, snapshot) {
                   if (snapshot.hasData) {
-                    List<Space> data = snapshot.data;
+                    List<Space> data = snapshot.data as List<Space>;
 
                     int index = 0;
 

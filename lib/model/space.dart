@@ -1,18 +1,18 @@
 class Space {
-  int id;
-  String name;
-  String imageUrl;
-  int price;
-  String city;
-  String country;
-  int rating;
-  String address;
-  String phone;
-  String mapUrl;
-  List photo;
-  int numberOfKitchens;
-  int numberOfBedrooms;
-  int numberOfCupboards;
+  int? id;
+  String? name;
+  String? imageUrl;
+  int? price;
+  String? city;
+  String? country;
+  int? rating;
+  String? address;
+  String? phone;
+  String? mapUrl;
+  List? photo;
+  int? numberOfKitchens;
+  int? numberOfBedrooms;
+  int? numberOfCupboards;
 
   Space(
       {this.id,

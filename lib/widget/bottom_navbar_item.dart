@@ -3,8 +3,8 @@ import 'package:bwa_cozy/theme.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavbarItem extends StatelessWidget {
-  final String imageUrl;
-  final bool isActive;
+  final String? imageUrl;
+  final bool? isActive;
 
   BottomNavbarItem({this.imageUrl, this.isActive});
 
@@ -17,12 +17,12 @@ class BottomNavbarItem extends StatelessWidget {
           onTap: () {},
           highlightColor: Color(0xfff5f6f7),
           child: Image.asset(
-            imageUrl,
+            imageUrl!,
             width: 26,
           ),
         ),
         Spacer(),
-        isActive
+        isActive!
             ? Container(
                 width: 30,
                 height: 2,

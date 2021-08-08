@@ -76,7 +76,7 @@ class _DetailPageState extends State<DetailPage> {
         child: Stack(
           children: [
             Image.network(
-              widget.space.imageUrl,
+              widget.space.imageUrl!,
               width: MediaQuery.of(context).size.width,
               height: 350,
               fit: BoxFit.cover,
@@ -113,7 +113,7 @@ class _DetailPageState extends State<DetailPage> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  widget.space.name,
+                                  widget.space.name!,
                                   style: blackTextStyle.copyWith(fontSize: 22),
                                 ),
                                 SizedBox(height: 2),
@@ -138,7 +138,7 @@ class _DetailPageState extends State<DetailPage> {
                                   margin: EdgeInsets.only(left: 2),
                                   child: RatingItem(
                                     index: index,
-                                    rating: widget.space.rating,
+                                    rating: widget.space.rating!,
                                   ),
                                 );
                               }).toList(),
@@ -194,19 +194,19 @@ class _DetailPageState extends State<DetailPage> {
                             FacilityItem(
                               name: 'Dapur',
                               imageUrl: 'assets/icon_kitchen.png',
-                              total: widget.space.numberOfKitchens,
+                              total: widget.space.numberOfKitchens!,
                             ),
                             SizedBox(width: 35),
                             FacilityItem(
                               name: 'Kamar Mandi',
                               imageUrl: 'assets/icon_bedroom.png',
-                              total: widget.space.numberOfBedrooms,
+                              total: widget.space.numberOfBedrooms!,
                             ),
                             SizedBox(width: 35),
                             FacilityItem(
                               name: 'Lemari',
                               imageUrl: 'assets/icon_cupboard.png',
-                              total: widget.space.numberOfCupboards,
+                              total: widget.space.numberOfCupboards!,
                             ),
                           ],
                         ),
@@ -228,7 +228,7 @@ class _DetailPageState extends State<DetailPage> {
                         height: 88,
                         child: ListView(
                           scrollDirection: Axis.horizontal,
-                          children: widget.space.photo.map((item) {
+                          children: widget.space.photo!.map((item) {
                             return Container(
                               margin: EdgeInsets.only(left: edge),
                               child: ClipRRect(
@@ -292,7 +292,7 @@ class _DetailPageState extends State<DetailPage> {
                               onTap: () {
                                 // launchUrl(
                                 //     'https://goo.gl/maps/5s61rreEq3PVn44u9');
-                                launchUrl(widget.space.mapUrl);
+                                launchUrl(widget.space.mapUrl!);
                               },
                               child: Image.asset(
                                 'assets/btn_map.png',
